@@ -48,10 +48,10 @@ public class Interativo extends JFrame {
                         break;
 
                     case KeyEvent.VK_UP:
-                        py++;
+                        py--;
                         break;
                     case KeyEvent.VK_DOWN:
-                        py--;
+                        py++;
                         break;
 
                     case KeyEvent.VK_LEFT:
@@ -81,10 +81,16 @@ public class Interativo extends JFrame {
             }
         };
 
-        
+        getContentPane().add(tela);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(640, 480);
+        setVisible(true);
 
+    }
 
-
+    public static void main(String[] args) {
+        Interativo jogo = new Interativo();
+        jogo.inicia();
     }
 
 }
