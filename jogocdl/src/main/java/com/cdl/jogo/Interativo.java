@@ -66,6 +66,25 @@ public class Interativo extends JFrame {
             }
         });
 
+
+        tela = new JPanel() {
+            public void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(Color.WHITE);
+                g.fillRect(0, 0, getWidth(), getHeight()); 
+                // Calcula a posição do retângulo com base no centro da tela e nos deslocamentos px e py
+                int x = getWidth() / 2 - 20 + px;
+                int y = getHeight() / 2 - 20 + py;
+                g.setColor(Color.BLUE);
+                g.fillRect(x, y , 40, 40);
+                g.drawString("Agora eu estou em (" + x + ", " + y + ").", 5, 10);
+            }
+        };
+
+        
+
+
+
     }
 
 }
